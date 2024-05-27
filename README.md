@@ -72,7 +72,7 @@ The analysis is split up into multiple parts. The main parts being the analysis 
 - `ungr` -> ungrouped
 - `epochShort` -> take the epoch only since onset of change in stimulus
 - `woT7T8` -> without electrode side T7 and T8 since they are too noisy
-- `groupCol_stimSep_condSep'' -> group,stimulus,condition Collapsed/Separate
+- `groupCol_stimSep_condSep` -> group,stimulus,condition Collapsed/Separate
 
 
 ### Time-frequency power analysis
