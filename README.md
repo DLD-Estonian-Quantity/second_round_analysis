@@ -13,7 +13,6 @@ The code is available under the GPLv3 open source license and might be used in a
 **Stimulus** - Referring to the word that makes up the odd-ball task with three options: *sada*, *vere* and *sadam* (sadaManipulated) 
 
 **Condition** - with in the optimum-1 oddball paradigm there are multiple oddballs per stimulus these are the deviants in quantity 1 and quantity 3 of the *stimulus* word as well as quantity 2 which also always took the place of the standard. The conditions are encoded as follow: deviant:  quantity 1: condition 32, quantity 2: condition 16, quantity 3: condition 64; standard, quantity 2: condition 128
-
 # Requirements
 
 We are including here the complete list of packages and extensions installed on the computer on the time of analysis. Even if not all packages are used by our processing and analysis we want to give the full list to disclose any possible interactions of packages which might occur in an unforeseen way.
@@ -73,6 +72,16 @@ The analysis is split up into multiple parts. The main parts being the analysis 
 ### Obligatory response
 
 
+
 ### Event-related fields
+`e2f_ungrouped.m` converts from EEGLAB to Fieldtrip format, run before the analysis.
+
+`ERF_calc_ungr_epochShort_woT7T8_groupCol_stimSep_condSep.m` The group analysis file.
+ERF -> Event-related field, calc -> calculation, ungr -> ungrouped -> epochShort -> take the epoch only since onset of change in stimulus, woT7T8 -> without electrode side T7 and T8 since they are too noisy, -> groupCol_stimSep_condSep -> group,stimulus,condition Collapsed/Separate
+
 
 ### Time-frequency power analysis
+`e2f_tf_ungrouped.m` converts from EEGLAB to Fieldtrip format, run before the analysis.
+
+`TF_calc_ungrouped_groupSep_stimSep_condSep_TW1.m` The group analysis file, based on the ERF results
+TF -> time-frequency, calc -> calculation, ungrouped -> ungrouped, groupCol_stimSep_condSep -> group,stimulus,condition Collapsed/Separate, TW1 -> time window 1,2,...
