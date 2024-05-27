@@ -1,12 +1,6 @@
 # Summary
 This repository is providing code and explanation for the study on the understanding of the Estonian quantity systems in a population with developmental language disorder (DLD). For this purpose a longitudinal EEG study was performed. In this repository you may find the code used. 
 The code is available under the GPLv3 open source license and might be used in accordance with this license. We used some code of other talented researchers. We are including the information in accordance with the license provided by them. If you feel like we are not following the best practice feel free to contact us and we will try the best to provide a good solution.
-
-# ToC
-0. Summary
-1. Structure
-2. Explanation of each file
-
 # Glossary
 **Group** - referring to the participants with two level typical and clinical developing children 
 
@@ -69,19 +63,24 @@ After all files are fixed `choose_stimuli.m`splits up the preprocessed data file
 
 The analysis is split up into multiple parts. The main parts being the analysis of the obligatory response. As well as the cluster-based permutation test of the event-related fields. The cluster-based permutation test on the time-frequency power was taken as an additional measure based on the results of the analysis of the event-related fields.
 
-### Obligatory response
-
-
-
 ### Event-related fields
 `e2f_ungrouped.m` converts from EEGLAB to Fieldtrip format, run before the analysis.
 
 `ERF_calc_ungr_epochShort_woT7T8_groupCol_stimSep_condSep.m` The group analysis file.
-ERF -> Event-related field, calc -> calculation, ungr -> ungrouped -> epochShort -> take the epoch only since onset of change in stimulus, woT7T8 -> without electrode side T7 and T8 since they are too noisy, -> groupCol_stimSep_condSep -> group,stimulus,condition Collapsed/Separate
+- `ERF` -> Event-related field
+- `calc` -> calculation
+- `ungr` -> ungrouped
+- `epochShort` -> take the epoch only since onset of change in stimulus
+- `woT7T8` -> without electrode side T7 and T8 since they are too noisy
+- `groupCol_stimSep_condSep'' -> group,stimulus,condition Collapsed/Separate
 
 
 ### Time-frequency power analysis
 `e2f_tf_ungrouped.m` converts from EEGLAB to Fieldtrip format, run before the analysis.
 
 `TF_calc_ungrouped_groupSep_stimSep_condSep_TW1.m` The group analysis file, based on the ERF results
-TF -> time-frequency, calc -> calculation, ungrouped -> ungrouped, groupCol_stimSep_condSep -> group,stimulus,condition Collapsed/Separate, TW1 -> time window 1,2,...
+- `TF` -> time-frequency
+- `calc` -> calculation
+- `ungrouped` -> ungrouped
+- `groupCol_stimSep_condSep` -> group,stimulus,condition Collapsed/Separate
+- `TW1` -> time window 1,2,...
